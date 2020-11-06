@@ -3,9 +3,9 @@ const db = require('../data/db-config')
 function get() {
     return db('projects')
 }
-function getById(id) {
+function getById(project_id) {
     return db('projects')
-        .where({ 'project_id': id })
+        .where({ project_id })
         .first()
 }
 
