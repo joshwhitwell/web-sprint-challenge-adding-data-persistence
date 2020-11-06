@@ -31,8 +31,11 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     Projects.insert(req.body)
-        .then(() => {
-
+        .then(ids => {
+            const id = ids[0]
+            return Projects.getById(id)
+        })
+        .then(project => {
             res.status(201).json({ project })
         })
         .catch(err => {
