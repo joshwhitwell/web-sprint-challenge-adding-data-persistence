@@ -4,7 +4,7 @@
   "description": "**Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,11 @@
   "homepage": "https://github.com/joshwhitwell/web-sprint-challenge-adding-data-persistence#readme",
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.12",
+    "sqlite3": "^5.0.0"
   }
 }
